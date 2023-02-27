@@ -30,8 +30,7 @@ volatile uint8_t pressCount = 0;			//volitale since it used in an interrupt
 int main(void)
 {
 	UsartInit(); 
-	
-	USART3.CTRLA = PIN7_bm;					                    //enables RXCIE therefore enables interrupt on RXCIF set to high
+	USART3.CTRLA = PIN7_bm;					        //enables RXCIE therefore enables interrupt on RXCIF set to high
 	PORTE.DIRSET = PIN0_bm | PIN1_bm | PIN2_bm | PIN3_bm;		//setter pins som output
 	PORTB.PIN2CTRL = PORT_PULLUPEN_bm |	PORT_ISC_FALLING_gc;	//setter button som input på press down og enable interrupt flag call
 	
