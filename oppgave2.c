@@ -2,7 +2,7 @@
 
 //Definisjoner
 #define F_CPU 4000000UL
-#define USART3_BAUD_RATE(BAUD_RATE)	((float)(64*F_CPU/(16*(float)BAUD_RATE))+0.5)
+#define USART3_BAUD_RATE(BAUD_RATE)((float)(64*F_CPU/(16*(float)BAUD_RATE))+0.5)
 
 //Inkludering av bibilotek
 #include <avr/interrupt.h>
